@@ -3,8 +3,12 @@ package socks.service.controller;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.ErrorResponse;
+import org.springframework.web.ErrorResponseException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import socks.service.exception.ColorFormatException;
 import socks.service.model.Socks;
 import socks.service.request.RequestChangeSocks;
 import socks.service.service.SocksService;
@@ -83,5 +87,12 @@ public class SocksController {
     @PostMapping("/batch")
     public ArrayList<Socks> uploadSocks(@RequestBody MultipartFile file) {
         return socksService.upload(file);
+    }
+
+    @ExceptionHandler(ColorFormatException.class)
+    public ResponseEntity<String> handlerColorFormatRegistration(RuntimeException ex){
+        return ResponseEntity
+                .badRequest()
+                .body(ex.getMessage());
     }
 }
