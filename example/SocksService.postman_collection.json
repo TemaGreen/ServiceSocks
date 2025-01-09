@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "abb35d19-41b2-4f1f-9ed5-ce61e17207aa",
+		"name": "SocksService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34021303"
+	},
+	"item": [
+		{
+			"name": "Income",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/socks/income",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"socks",
+						"income"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Outcome",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/socks/outcome",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"socks",
+						"outcome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Socks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/socks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"socks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Socks",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/socks/{id}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"socks",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Excel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/socks/batch",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"socks",
+						"batch"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
